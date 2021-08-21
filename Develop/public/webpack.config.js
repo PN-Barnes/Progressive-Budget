@@ -3,7 +3,7 @@ const path = require('path');
 
 const config = {
   entry: {
-    app: './public/index.js',
+    app: './index.js',
   },
   output: {
     path: __dirname + '/dist',
@@ -27,19 +27,19 @@ const config = {
   plugins: [
     new WebpackPwaManifest({
       fingerprints: false,
-      name: 'Newsy app',
-      short_name: 'Newsy',
+      name: 'Progressive Budget',
+      short_name: 'budget',
       description:
-        'An application that allows you to view different news articles and save your favorites.',
+        'An Application that allows you track expenses on and offline',
       background_color: '#01579b',
       theme_color: '#ffffff',
       'theme-color': '#ffffff',
       start_url: '/',
       icons: [
         {
-          src: path.resolve('assets/images/icons/android-chrome-192x192.png'),
-          sizes: [96, 128, 192, 256, 384, 512],
-          destination: path.join('assets', 'icons'),
+          src: path.resolve('icons/icon-192x192.png'),
+          sizes: [192, 512],
+          destination: path.join('public', 'icons'),
         },
       ],
     }),
