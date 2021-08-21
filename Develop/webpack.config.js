@@ -7,7 +7,7 @@ const config = {
   },
   output: {
     path: __dirname + '/dist',
-    filename: 'app.bundle.js',
+    filename: '[name].bundle.js',
   },
   mode: 'development',
   module: {
