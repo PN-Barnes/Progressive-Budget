@@ -8,9 +8,19 @@ This Application is made for the person who loves to know what every single doll
 
 This application was built using indexedDb and service workers for the main functionality. The indexedDb works through the client and allows for the application to store files within browser for flexible usage and offline capability.
 
+## Deployed Application
+
+Visit this [link](https://serene-falls-70782.herokuapp.com/) to see the live site with working code outside of the localhost environment.
+
 ## Installation
 
 To run this application, first download the files from the github repository. Once that is complete, clone it down into a directory on your machine. Then, open up your code editor and head into the terminal where this repo is located. Once inside there, type `npm install` to download all the dependencies for the application to run successfully. After that is done, type `npm start` into the command line and visit localhost in your browser.
+
+[Github Repository](https://github.com/PN-Barnes/Progressive-Budget)
+
+[express](https://www.npmjs.com/package/express)
+
+[Visual Studio Code](https://code.visualstudio.com/)
 
 [Github](https://github.com/)
 
