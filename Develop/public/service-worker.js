@@ -2,7 +2,7 @@ const FILES_TO_CACHE = [
   '/',
   '/index.js',
   '/index.html',
-  '/dist/app.bundle.js',
+  '/db.js',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
   '/styles.css',
@@ -49,12 +49,12 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fetch(event.request));
     return;
   }
-  if (event.request.url.includes('/api/images')) {
+  if (event.request.url.includes('/api/')) {
     event.respondWith(
       caches.open(RUNTIME_CACHE).then((cache) => {
         return fetch(event.request)
           .then((response) => {
-            cache.put(event.request, response.clone());
+            cache.put(event.request.url, response.clone());
             return response;
           })
           .catch(() => caches.match(event.request));
@@ -63,16 +63,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return caches.open(RUNTIME_CACHE).then((cache) => {
-        return fetch(event.request).then((response) => {
-          return cache.put(event.request, response.clone()).then(() => {
-            return response;
-          });
-        });
+    fetch(event.request).catch(function () {
+      return caches.match(event.request).then(function (response) {
+        if (response) {
+          return response;
+        } else if (event.request.headers.get('accept').includes('text/html')) {
+          // return the cached home page for all requests for html pages
+          return caches.match('/');
+        }
       });
     })
   );
