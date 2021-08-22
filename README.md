@@ -1,5 +1,7 @@
 # Progressive-Budget
 
+![Deployed application](./assets/2021-08-21.png)
+
 ## Introduction
 
 This Application is made for the person who loves to know what every single dollar of their hard earned money goes. This is your personal budget tracker. This application only requires you to add or subtract your funds and it will track them for the remainder of your time. This application works offline as well for flexible tracking.
