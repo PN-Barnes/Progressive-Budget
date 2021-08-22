@@ -16,6 +16,10 @@ To learn more about this new technology, check out the MDN webpage to check the 
 
 [indexedDb](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
+## Service-Worker.js
+
+The application uses a web worker called a service worker, basically a javascript file that intercepts network requests. This service worker is independent of the application itself. To learn more about what a service worker and what is it's function, check out the documentation. [Service-worker](https://developers.google.com/web/ilt/pwa/introduction-to-service-worker)
+
 ## Deployed Application
 
 Visit this [link](https://serene-falls-70782.herokuapp.com/) to see the live site with working code outside of the localhost environment.
