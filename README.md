@@ -8,6 +8,14 @@ This Application is made for the person who loves to know what every single doll
 
 This application was built using indexedDb and service workers for the main functionality. The indexedDb works through the client and allows for the application to store files within browser for flexible usage and offline capability.
 
+## IndexedDb
+
+This application uses IndexedDb for storing data within the client. IndexedDb is a transactional database systme that is a javascript object oriented database.
+
+To learn more about this new technology, check out the MDN webpage to check the usage and purpose of indexedDb.
+
+[indexedDb](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+
 ## Deployed Application
 
 Visit this [link](https://serene-falls-70782.herokuapp.com/) to see the live site with working code outside of the localhost environment.
